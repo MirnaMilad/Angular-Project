@@ -1,0 +1,35 @@
+<div class="container mt-5">
+<div class="row">
+  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <h2>Create account</h2>
+          <div class="inputs">
+              <div class="form-group">
+
+                  <!-- for typing a valid user name -->
+                  <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">User name</label>
+                  <input type="text" class="form-control name" autocomplete="off" formControlName="name" placeholder="Write your name">
+                  <span *ngIf="!userForm.get('name').valid && userForm.get('name').touched" class="help-block">Please
+                      enter a valid name</span>
+                    </div>
+                      
+                  <!-- for typing a valid email -->
+                  
+
+                  <div class="mb-5">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Write your email" formControlName="email">
+                    <span *ngIf="!userForm.get('email').valid && userForm.get('email').touched" class="help-block">
+                      Please enter your email
+                  </span>
+                  </div>
+              </div>
+              <div class="submit">
+                  <button class="btn btn-outline-primary" type="submit" [disabled]="!userForm.valid">{{userId? 'Edit user':'Add new user'}}</button>
+                  </div>
+              </div>
+      </form>
+  </div>
+</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <a class="btn btn-outline-success mb-5" routerLink="/users/new">Add new user</a>
+<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users ; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>
+            <button class="btn btn-warning mx-3" [routerLink]="['/users',user.id]">Edit user</button>
+            <button class="btn btn-danger mx-3" (click)="deleteUser(user.id)">Delete user</button>
+            <button class="btn btn-success mx-3" [routerLink]="['userDetails' , user.id]">User details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+.table-header{
+    background-color: rgb(1,152,122);
+    color:white;
+    height: 70px;
+    margin:20px 0px;
+    border-radius: 20px;
+}
+.cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:600;
+}

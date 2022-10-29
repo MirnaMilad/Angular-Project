@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/* Navigation bar for large screens*/
+nav.first {
+    height: 85px;
+    display: flex;
+    align-items: center;
+}
+/* hiding Navigation bar for small screens */
+nav.second {
+    display: none;
+}
+
+nav.first div.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.first div.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Details section */
+nav.first div.details ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav.first div.details a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    /* Regular Montserrat */
+    font-weight: 400;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+}
+/* Search section */
+nav.first div.search {
+    position: relative;
+    display: flex;
+}
+
+nav.first div.search input {
+    border-radius: 20px;
+}
+
+/* Place holder for all browsers */
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-family: 'Poppins', sans-serif;
+    padding-left: 5%;
+    margin-bottom: 50px;
+    color: gray;
+    font-size: 12px;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: 'Poppins', sans-serif;
+    padding-left: 5%;
+    margin-bottom: 50px;
+    color: gray;
+    font-size: 12px;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    font-family: 'Poppins', sans-serif;
+    padding-left: 5%;
+    margin-bottom: 50px;
+    color: gray;
+    font-size: 12px;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-family: 'Poppins', sans-serif;
+    padding-left: 5%;
+    margin-bottom: 50px;
+    color: gray;
+    font-size: 12px;
+}
+
+
+@media only screen and (max-width: 992px) {
+    /* hiding Navigation bar for large screens */
+    nav.first {
+        display: none;
+    }
+
+    nav.second {
+        display: block;
+        padding-top: 0px;
+    }
+/* Navigation bar for small screens */
+    nav.second div.container-fluid {
+        background-color: black;
+        color: white;
+        height: 53px;
+        align-items: center;
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-between;
+    }
+    /* Offcanvas header section */
+    nav.second div.controls div.offcanvas-header {
+        padding: 11% 4%;
+    }
+
+    nav.second div.controls div.offcanvas-header button.close svg {
+        margin: 0px;
+        padding: 0px;
+        width: 42%;
+    }
+
+    nav.second div.controls div.offcanvas-header a {
+        font-size: 12px;
+    }
+
+    nav.second div.controls div.offcanvas-header a svg {
+        height: 11px;
+    }
+    /* Offcanvas body */
+    nav.second div.controls div.offcanvas-body {
+        padding: 0px;
+
+        font-weight: 500;
+        font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+        font-size: 16px
+    }
+
+    nav.second div.controls div.show {
+        background-color: black;
+        width: 35%;
+    }
+
+    nav.second div.details {
+        padding-bottom: 20%;
+    }
+
+    nav.second div.details ul li {
+        text-align: center;
+    }
+
+    nav.second div.controls div.offcanvas-body a {
+        display: block
+    }
+
+    nav.second div.controls div.offcanvas-body div.log-out {
+        text-align: center;
+    }
+
+    nav.second div.controls div.offcanvas-body div.log-out a {
+        text-decoration: none;
+        color: gray
+    }
+}

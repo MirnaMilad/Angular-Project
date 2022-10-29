@@ -1,0 +1,21 @@
+<form class="mt-5" [formGroup]="form" (ngSubmit)="onSubmit(name.value , age.value)">
+
+<!-- for typing a valid user name -->
+<div class="mb-3">
+<label for="name">Name:</label>
+<input type="name" class="form-control name" autocomplete="off"  placeholder="Please enter your name" formControlName="name" #name>
+    <span  class="help-block" *ngIf="hasError('pattern' , 'name') && getUserName.touched && !form.get('name').valid">Please enter a valid name</span>
+    <span  class="help-block" *ngIf="hasError('required' , 'name') && form.get('name').touched && !form.get('name').valid">User name is required</span>
+
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Age:</label>
+    <input type="number" class="form-control age" autocomplete="off"  placeholder="Please enter your age" formControlName="age" #age>
+    <span  class="help-block" *ngIf="hasError('min' , 'age') && getUserAge.touched && !form.get('age').valid">Please enter a valid age</span>
+    <span  class="help-block" *ngIf="hasError('required' , 'age') && form.get('age').touched && !form.get('age').valid">User age is required</span>
+  </div>
+  <div class="button">
+    <button class="add"  type="submit" [disabled]="!form.valid">Add</button>
+  </div>
+
+</form>

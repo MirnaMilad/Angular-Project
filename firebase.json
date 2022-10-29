@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/first-task-second-day",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

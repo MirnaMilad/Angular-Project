@@ -1,0 +1,27 @@
+<div>
+    <div class="row table-header">
+      <div class="col-md-4 cell">
+        <p>Id</p>
+      </div>
+      <div class="col-md-4 cell">
+        <p>Name</p>
+      </div>
+      <div class="col-md-4 cell">
+        <p>Age</p>
+      </div>
+    </div>
+
+<div *ngFor="let student of studentsInChild ; let i=index ">
+    <div class="row">
+      <div class="col-md-4 cell">
+        <p>{{i+1}}</p>
+      </div>
+      <div class="col-md-4 cell">
+        <p>{{student.name}}</p>
+      </div>
+      <div class="col-md-4 cell">
+        <p>{{student.age}}</p>
+      </div>
+    </div>
+   </div>
+  </div>

@@ -1,0 +1,12 @@
+<div class="backg p-5 text-center text-dark">
+  <p class="h1 text-danger mb-5">OurGallery</p>
+  <div appScale class="card g-3 col-lg-6 center mt-5">
+    <img [src]="imgSrc" class="card-img-top" alt="..." />
+    <div class="card-body backg text-light">
+      <h5 appHighLight="yellow" class="card-title">Shop Gallery</h5>
+      <p class="card-text">{{ shopDesc }}</p>
+      <a appScale href="#" class="btn btn-warning" (click)="showGallery($event)"
+        >Show Next Shop</a>
+    </div>
+  </div>
+</div>

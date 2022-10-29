@@ -1,0 +1,10 @@
+img {
+  height: 350px;
+  object-fit: cover;
+}
+.center {
+  margin: auto;
+}
+.backg {
+  background-color: #3a3d43;
+}

@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h2 class="mt-5 text-dark">Create account</h2>
+            <div class="inputs">
+                <div class="form-group">
+
+                    <!-- for typing a valid user name -->
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control name" autocomplete="off" formControlName="name">
+                        <span  class="help-block" *ngIf="hasError('pattern' , 'name') && getUserName.touched && !loginForm.get('name').valid">Please enter a valid name</span>
+                        <span  class="help-block" *ngIf="hasError('required' , 'name') && loginForm.get('name').touched && !loginForm.get('name').valid">User name is required</span>
+
+                    <!-- for typing a valid phone number -->
+                    <label for="phone">Phone number:</label>
+                    <input type="text" class="form-control phone" autocomplete="off" formControlName="phone">
+                    <span  class="help-block" *ngIf="hasError('pattern' , 'phone') && getPhone.touched  && !loginForm.get('phone').valid">Please enter a valid phone</span>
+                        <span  class="help-block" *ngIf="hasError('required' , 'phone') && getPhone.touched && !getPhone.valid">phone is required</span>
+                    <!-- for typing a valid email -->
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control email" autocomplete="off" formControlName="email">
+                    <span  class="help-block" *ngIf="hasError('pattern' , 'email') && getEmail.touched  && !loginForm.get('email').valid">Please enter a valid email</span>
+                    <span  class="help-block" *ngIf="hasError('required' , 'email') && getEmail.touched && !getEmail.valid">email is required</span>
+                    <!-- for typing a valid password -->
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control password" autocomplete="off"
+                        formControlName="password">
+                        <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" class="help-block">Please
+                        enter a strong password</span>
+                </div>
+                <div class="submit">
+                    <button type="submit" [disabled]="!loginForm.valid">Log in</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
